@@ -1,4 +1,4 @@
-function selectInstrumentsOptimally(equipmentList, maxPayload, maxCapacity) {
+function selectInstruOptim(equipmentList, maxPayload, maxCapacity) {
     equipmentList.forEach(equipment => {
      equipment.efficiency = equipment.value / (equipment.weight + equipment.volume);
  });
@@ -34,10 +34,10 @@ const equipmentList = [
  { weight: 5, volume: 4, value: 20, name: 'Instrument 4' }
 ];
 
-const maxPayload = 10;
-const maxCapacity = 7;
+let maxPayload = 10;
+let maxCapacity = 7;
 
-const selectionResult = selectInstrumentsOptimally(equipmentList, maxPayload, maxCapacity);
+let selectionResult = selectInstruOptim(equipmentList, maxPayload, maxCapacity);
 
 console.log("Selected combination of equipment:");
 selectionResult.chosenEquipment.forEach(equipment => {
